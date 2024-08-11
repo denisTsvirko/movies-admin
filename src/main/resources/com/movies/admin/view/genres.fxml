@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1058.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.movies.admin.controller.GenreController">
+    <children>
+        <Text layoutX="20.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Жанры" wrappingWidth="138.13671875">
+            <font>
+                <Font name="Arial" size="34.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tableGenres" layoutX="20.0" layoutY="90.0" prefHeight="472.0" prefWidth="567.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="91.0" text="Id" />
+                <TableColumn fx:id="name" minWidth="0.0" prefWidth="363.0" text="Name" />
+                <TableColumn fx:id="isActive" minWidth="0.0" prefWidth="111.0" text="IsActive" />
+            </columns>
+        </TableView>
+      <Pane layoutX="666.0" layoutY="90.0" prefHeight="176.0" prefWidth="336.0" style="-fx-border-color: #FF9F00;">
+         <children>
+            <Button layoutX="285.0" layoutY="150.0" onAction="#delete" mnemonicParsing="false" style="-fx-background-color: #FF9F00;" text="Delete" textAlignment="CENTER" />
+            <TextField layoutX="29.0" layoutY="71.0" prefHeight="25.0" prefWidth="222.0" promptText="Name" fx:id="nameField"/>
+            <CheckBox layoutX="260.0" layoutY="75.0" mnemonicParsing="false" text="IsActive" fx:id="isActiveField"/>
+            <Button layoutX="134.0" layoutY="121.0" onAction="#save" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #7bdcb5;" text="Save" textAlignment="CENTER" />
+            <Text layoutX="101.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Actions">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Text>
+            <TextField layoutX="49.0" layoutY="121.0" prefHeight="25.0" prefWidth="62.0" promptText="id"  fx:id="idField"/>
+            <Text layoutX="29.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="39.294921875" />
+            <Text layoutX="29.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" wrappingWidth="22.208984375" />
+         </children>
+      </Pane>
+    </children>
+</Pane>
